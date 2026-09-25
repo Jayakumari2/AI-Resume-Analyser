@@ -28,10 +28,12 @@ Install Python 3.11+ first, then from the repository root:
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r backend/requirements.txt
-uvicorn backend.app.main:app --reload --port 8000
+uvicorn backend.app.main:app --reload --port 8001
 ```
 
-The health endpoint is available at `http://localhost:8000/api/health`. Copy `backend/.env.example` to `backend/.env` when you are ready to connect MongoDB. AI analysis features are intentionally not implemented yet.# React + TypeScript + Vite
+The health endpoint is available at `http://localhost:8001/api/health`. The resume analysis endpoints accept PDF and DOCX files and return heuristic feedback while the AI provider is being integrated. Copy `backend/.env.example` to `backend/.env` when you are ready to connect MongoDB.
+
+# React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
