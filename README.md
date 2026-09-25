@@ -31,7 +31,7 @@ pip install -r backend/requirements.txt
 uvicorn backend.app.main:app --reload --port 8001
 ```
 
-The health endpoint is available at `http://localhost:8001/api/health`. The resume analysis endpoints accept PDF and DOCX files and return heuristic feedback while the AI provider is being integrated. Copy `backend/.env.example` to `backend/.env` when you are ready to connect MongoDB.
+The health endpoint is available at `http://localhost:8001/api/health`. The analysis endpoints accept PDF and DOCX files, and job descriptions can be pasted as text. Copy `backend/.env.example` to `backend/.env`, add an `AI_API_KEY`, and restart FastAPI to enable model-powered feedback. The key stays on the backend and is never sent to the browser. Without a key, the API uses its deterministic heuristic fallback.
 
 # React + TypeScript + Vite
 
